@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+src/__init__.py
+src/evaluation_functions.py
+src/graph_functions.py
+src/matching_functions.py
+src/plotting_functions.py
+src/simplification_functions.py
+src.egg-info/PKG-INFO
+src.egg-info/SOURCES.txt
+src.egg-info/dependency_links.txt
+src.egg-info/top_level.txt

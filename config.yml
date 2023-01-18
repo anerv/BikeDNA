@@ -1,0 +1,173 @@
+# Provide the name of the study area and the name of the reference data, if available, as a human-readable string (max 22 characters).
+# This will be used for:
+# - plot labelling
+# - result labelling
+# - exported reports
+
+area_name: "Copenhagen"
+reference_name: "GeoDanmark"
+
+# Provide the name of the study area/project as a slug.
+# (Use https://you.tools/slugify/ if unsure)
+# This will be used for:
+# - folder and subfolder structure setup 
+study_area: "cph_geodk"
+
+# Provide the CRS which will be used throughout the anaylysis. 
+# This must be a projected CRS with meters as unit length. 
+study_crs: 'EPSG:25832' # The CRS you want to use for the analysis. 
+
+# Choose whether plots should be saved in low or high resolution.
+# If 'low', plots are saved as png. If 'high', plots are saved as svg (this will lead to significantly larger files)
+plot_resolution: 'low'
+
+# Queries used to retrieve the network edges with dedicated bicycle infrastructure from OSM street network data. Update as needed.
+bicycle_infrastructure_queries:
+  A:
+    "highway == 'cycleway'"
+  B:
+   "cycleway in ['lane','track','opposite_lane','opposite_track','designated','crossing']" #'shared_lane',
+  C:
+    "cycleway_left in ['lane','track','opposite_lane','opposite_track','designated','crossing']" # should shared_busway be included? 'shared_lane'
+  D:
+    "cycleway_right in ['lane','track','opposite_lane','opposite_track','designated','crossing']" # 'shared_lane'
+  E:
+    "cycleway_both in ['lane','track','opposite_lane','opposite_track','designated','crossing']" # 'shared_lane'
+
+osm_bicycle_infrastructure_type:
+  'protected':
+    - "highway == 'cycleway'"
+    - "cycleway in ['track','opposite_track']"
+    - "cycleway_left in ['track','opposite_track']"
+    - "cycleway_right in ['track','opposite_track']"
+    - "cycleway_both in ['track','opposite_track']"
+
+  'unprotected':
+    - "cycleway in ['lane','opposite_lane','crossing']" # 'shared_lane'
+    - "cycleway_left in ['lane','opposite_lane','crossing']" # 'shared_lane'
+    - "cycleway_right in ['lane','opposite_lane','crossing']" # 'shared_lane'
+    - "cycleway_both in ['lane','opposite_lane','crossing']" # 'shared_lane'
+
+  'unknown':
+    - "cycleway in ['designated']"
+    - "cycleway_left in ['designated']"
+    - "cycleway_right in ['designated']"
+    - "cycleway_both in ['designated']"
+
+
+# Define tags to be downloaded from OSM here. Note that any non-standard tags used in the custom filter must be included here.
+osm_way_tags:
+  - "access"
+  - "barrier"
+  - "bridge"
+  - "bicycle"
+  - "bicycle_road"
+  - "crossing"
+  - "cycleway"
+  - "cycleway:left"
+  - "cycleway:right"
+  - "cycleway:both"
+  - "cycleway:buffer"
+  - "cycleway:left:buffer"
+  - "cycleway:right:buffer"
+  - "cycleway:both:buffer"
+  - "cycleway:width"
+  - "cycleway:left:width"
+  - "cycleway:right:width"
+  - "cycleway:both:width"
+  - "cycleway:surface"
+  - "foot"
+  - "footway"
+  - "highway"
+  - "incline"
+  - "junction"
+  - "layer"
+  - "lit"
+  - "maxspeed"
+  - "maxspeed:advisory"
+  - "moped"
+  - "moter_vehicle"
+  - "motorcar"
+  - "name"
+  - "oneway"
+  - "oneway:bicycle"
+  - "osm_id"
+  - "segregated"
+  - "surface"
+  - "tracktype"
+  - "tunnel"
+  - "width"
+
+
+# Define tags to be analysed when evaluating the number of existing/missing tags.
+# Must be in the form of a nested dictionary.
+# The first keys indicate the overall attribute analysed. The sub-keys indicate which columns to look at depending on whether the OSM feature is mapped as a feature on a centerline or the as an individual geometry.
+# For example, if highway = 'cycleway' the feature is mapped as an individual geometry. In this case, the tag 'width', if filled out, describes the width of the cycleway.
+# On the other hand, if highway = 'primary' and cycleway = 'track' the bicycle infrastructure is mapped as an atttribute to a road centerline and the 'width' tag refers to the main road. In this instance only the 'cycleway_width' columns is of interest.
+existing_tag_analysis: 
+  surface: 
+    true_geometries: 
+      - surface
+      - cycleway_surface
+    centerline:
+      - cycleway_surface
+  width: 
+    true_geometries: 
+      - width
+      - cycleway_width
+      - cycleway_left_width
+      - cycleway_right_width
+      - cycleway_both_width
+    centerline:
+      - cycleway_width
+      - cycleway_left_width
+      - cycleway_right_width
+      - cycleway_both_width
+  speedlimit:
+    all:
+      - maxspeed
+  lit: 
+      all:
+        - lit
+
+# Define tags that are considered incompatible and a sign of errors in the OSM data. 
+# For example, if an element has been defined as bicycle_infrastructure = 'yes' earlier in the analysis, it should not have bicycle = 'no' or bicycle = 'dismount' or car = 'yes'
+incompatible_tags_analysis:
+  bicycle_infrastructure:
+    'yes':
+      - ['bicycle','no']
+      - ['bicycle','dismount']
+      - ['car','yes']
+  
+
+# Define the desired width of grid cell size in meters for the grid used for local summaries of analysis resutls. 
+# When evaluating the quality of road network data, using cell sizes of 1 km is usually the default (see e.g. Koukoletsos et al, 2011; Haklay, 2010; Neis et al., 2011)
+# Smaller cell sizes give a better granularity, but will make some elements of the analysis slower to compute
+grid_cell_size: 300
+
+# Specify whether the bicycle infrastructure in the reference data have been mapped as centerlines or true geometries.
+# Describes whether bicycle infrastructure is digitised as one line per road segment (regardless of whether there are bicycle infrastructure along both sides)
+# or if there are two distinct geometries mapped in situations with a bike path/track on both sides of a street.
+# Can be a value describing the whole dataset or the name of the column describing the situation for each row.
+# Valid values are: 'centerline' or 'true_geometries' or a string with the name of the column with either True or False for each geometry.
+reference_geometries: true_geometries # Alternative: centerline. 
+
+# Specify whether the infrastructure geometries are designed for travelling in both directions (i.e. bidirectional) or only one way.
+# This information is used to assess the true value of the network so that e.g. broad bidirectional bike lanes' length are counted twice since they represent the same infrastructure as two narrow lanes on each side of the road.
+# If geometries are mapped as centerlines but represent infrastructure in both sides of the street (see 'reference_geometries'), this column should also be set to True.
+# Can be a value describing the whole dataset or the name of the column describing the situation for each row.
+# Valid values are: True or False or a string with the name of the column with either True or False for each geometry.
+bidirectional: False 
+
+# Specify a dictionary used for classifying segments of bicycle infrastructure as protected or unprotected.
+# For protected, unprotected or mixed (protected on one side, unprotected on the other side) specify the query defining the type
+ref_bicycle_infrastructure_type: 
+  protected:
+    - "vejklasse ==  'Cykelsti langs vej'"
+  unprotected:
+    - "vejklasse == 'Cykelbane langs vej'"
+  # mixed: # Only provide mixed query if relevant
+  #   - ""
+
+# Specify the column name (string) of the column in the reference data with the unique ID for each row/feature.
+reference_id_col: 'fot_id'

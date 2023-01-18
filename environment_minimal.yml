@@ -1,0 +1,19 @@
+name: bikedna
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - networkx
+  - ipykernel
+  - momepy
+  - folium
+  - jupyterlab
+  - geopandas
+  - osmnx
+  - pyyaml
+  - contextily
+  - pandas
+  - matplotlib
+  - haversine
+  - nbconvert
+prefix: /opt/miniconda3/envs/bikedna
