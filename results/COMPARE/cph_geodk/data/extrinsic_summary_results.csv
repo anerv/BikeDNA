@@ -1,0 +1,19 @@
+,OSM,GeoDanmark
+Total infrastructure length (km),1055.5622829996466,626.4757351740324
+Protected bicycle infrastructure density (m/km2),5336.050045632197,2998.801936327368
+Unprotected bicycle infrastructure density (m/km2),431.3658467869088,455.04665260615366
+Mixed protection bicycle infrastructure density (m/km2),52.047012488140325,0.0
+Bicycle infrastructure density (m/km2),5819.4629049072455,3453.8485889335225
+Nodes,4928.0,4125.0
+Dangling nodes,1814.0,870.0
+Nodes per km2,27.16875513388584,22.74170351608748
+Dangling nodes per km2,10.000836406832166,4.796432014302086
+Overshoots,10.0,21.0
+Undershoots,16.0,11.0
+Components,349.0,204.0
+Length of largest component (km),750.2251037057129,501.4599564606041
+Largest component's share of network length,92.445519929892,80.04459363798027
+Component gaps,83.0,52.0
+Alpha,0.1106486651101411,0.09508793208004851
+Beta,1.1503652597402598,1.1406060606060606
+Gamma,0.3836107727703343,0.3803864499959576

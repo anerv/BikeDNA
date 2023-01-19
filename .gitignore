@@ -10,10 +10,6 @@ src/cache
 data/OSM/
 data/REFERENCE/cph_geodk/processed
 
-results/OSM/cph_geodk/data/
-results/REFERENCE/cph_geodk/data/
-results/COMPARE/cph_geodk/data/
-
 exports/cph_geodk/pdf/1a.pdf
 exports/cph_geodk/pdf/1b.pdf
 exports/cph_geodk/pdf/2a.pdf
