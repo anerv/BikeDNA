@@ -180,7 +180,7 @@ python export_notebooks2pdf.py
 
 This will generate all corresponding single pdf files (1a.pdf, 1b.pdf, ..) and stitch them together into a combined `report.pdf` file, all into the `export/[study_area]/pdf` folder. To convert only a subset, see [Advanced export options](#advanced-export-options).
 
-We provide a finished demo report here: [report.pdf](exports/cph_geodk/pdf/report.pdf)
+We provide a finished demo report here: [report.pdf](https://github.com/anerv/BikeDNA/blob/GeoDanmark/exports/cph_geodk/pdf/report.pdf)
 
 ### Advanced export options
 
