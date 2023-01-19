@@ -7,19 +7,3 @@ scripts/cache
 src/cache
 .vscode/settings.json
 
-data/OSM/
-data/REFERENCE/cph_geodk/processed
-
-exports/cph_geodk/pdf/1a.pdf
-exports/cph_geodk/pdf/1b.pdf
-exports/cph_geodk/pdf/2a.pdf
-exports/cph_geodk/pdf/2b.pdf
-exports/cph_geodk/pdf/3a.html
-exports/cph_geodk/pdf/preamble.pdf
-exports/cph_geodk/pdf/titlepage.pdf
-exports/cph_geodk/pdf/3a.pdf
-exports/cph_geodk/pdf/3b.pdf
-exports/cph_geodk/pdf/appendix_a.pdf
-exports/cph_geodk/pdf/report_lowres.pdf
-
-
