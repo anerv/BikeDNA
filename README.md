@@ -28,6 +28,12 @@ The analysis is divided into 3 parts: **OSM**, analyzing OSM bicycle network dat
 
 First [clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) this repository (recommended) to your local machine or download it.
 
+To avoid cloning the history and larger branches with example data and plots, use:
+
+```
+git clone -b main --single-branch https://github.com/anerv/BikeDNA --depth 1
+```
+
 ### Create Python conda environment
 
 To ensure that all packages needed for the analysis are installed, it is recommended to create and activate a new conda environment using the `environment.yml`:
@@ -67,14 +73,14 @@ Run Jupyter Lab or Notebook with kernel *bikedna* (Kernel > Change Kernel > bike
 
 After the installation steps:  
 
-- For an example of results that BikeDNA can produce, see a demo PDF output here: [report.pdf](exports/cph_geodk/pdf/report.pdf)  or [here](exports/cph_kk_example_report.pdf)
-- For an example of how BikeDNA can be used, run the notebooks without changing the default parameters. This will analyze an area around Copenhagen, Denmark.
+- For an example of results that BikeDNA can produce, see a demo PDF output here: [report.pdf](https://github.com/anerv/BikeDNA/tree/GeoDanmark/exports/pdf/report.pdf)
+- For an example of how BikeDNA can be used, run the notebooks on the branch 'GeoDanmark' without changing the default parameters. This will analyze an area around Copenhagen, Denmark using a local reference data set.
 
 ## II. Setup
 
 ### Fill out the configuration file
 
-In order to run the code, the configuration file [`config.yml`](config.yml) must be filled out - the default values will analyze the Copenhagen area using a subset of a national Danish data set ('GeoDanmark'). The configuration file contains a range of settings needed for adapting the analysis to different areas and types of reference data. The study area name provided in the configuration file will be used by BikeDNA for folder structure setup, plot naming, and result labelling.
+In order to run the code, the configuration file [`config.yml`](config.yml) must be filled out - see the branch 'GeoDanmark' for an example. The configuration file contains a range of settings needed for adapting the analysis to different areas and types of reference data. The study area name provided in the configuration file will be used by BikeDNA for folder structure setup, plot naming, and result labelling.
 
 Plot settings can be changed in [`scripts/settings/plotting.py`](scripts/settings/plotting.py).
 
