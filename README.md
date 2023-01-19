@@ -74,7 +74,7 @@ Run Jupyter Lab or Notebook with kernel *bikedna* (Kernel > Change Kernel > bike
 After the installation steps:  
 
 - For an example of results that BikeDNA can produce, see a demo PDF output here: [report.pdf](https://github.com/anerv/BikeDNA/blob/GeoDanmark/exports/cph_geodk/pdf/report.pdf)
-- For an example of how BikeDNA can be used, run the notebooks on the branch 'GeoDanmark' without changing the default parameters. This will analyze an area around Copenhagen, Denmark using a local reference data set.
+- For an example of how BikeDNA can be used, run the notebooks on the branch [GeoDanmark](https://github.com/anerv/BikeDNA/tree/GeoDanmark) without changing the default parameters. This will analyze an area around Copenhagen, Denmark using a local reference data set.
 
 ## II. Setup
 
