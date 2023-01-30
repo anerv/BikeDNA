@@ -1149,7 +1149,7 @@ def find_overshoots(
         dangling_nodes (gdf): gdf with dangling nodes in network
         edges (gdf): gdf with network edges
         length_tolerance (numeric): threshold for when an edge is considered an overshoot
-        return_undershoot_edges (boolean): Set to False if the edges identified as overshoots should not be returned.
+        return_overshoot_edges (boolean): Set to False if the edges identified as overshoots should not be returned.
                                             If it is set to False, the index of the edges will be returned instead.
 
     Returns:
