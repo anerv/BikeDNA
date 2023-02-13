@@ -19,7 +19,7 @@ BikeDNA consists of Jupyter notebooks that analyze bicycle infrastructure data s
 The [I. Installation](#i-installation), [II. Setup](#ii-setup), [III. Analysis](#iii-analysis), and [IV. Create reports](#iv-create-reports) steps are illustrated in the figure and described in detail below. Dotted parts are optional.
 
 <p align="center">
-<img src='images/workflow_illustration.png' width=500/>
+<img src='images/workflow_illustration_logo.png' width=500/>
 </p>
 
 The analysis is divided into 3 parts: **OSM**, analyzing OSM bicycle network data intrinsically, **REFERENCE**, analyzing non-OSM reference bicycle network data intrinsically, and **COMPARE**, for comparing OSM and reference data extrinsically.
