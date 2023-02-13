@@ -39,3 +39,7 @@ then
 else
 	cp results/COMPARE/"$study_area"/maps_static/titleimage.svg exports/"$study_area"/pdf/titleimage.svg
 fi
+
+
+cp images/BikeDNA_logo1.svg exports/"$study_area"/pdf/logo.svg
+cp images/BikeDNA_logo1.svg exports/"$study_area"/html/logo.svg
