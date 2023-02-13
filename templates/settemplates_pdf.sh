@@ -41,5 +41,5 @@ else
 fi
 
 
-cp images/BikeDNA_logo1.svg exports/"$study_area"/pdf/logo.svg
-cp images/BikeDNA_logo1.svg exports/"$study_area"/html/logo.svg
+cp images/BikeDNA_logo.svg exports/"$study_area"/pdf/logo.svg
+cp images/BikeDNA_logo.svg exports/"$study_area"/html/logo.svg
