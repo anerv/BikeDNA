@@ -42,4 +42,3 @@ fi
 
 
 cp images/BikeDNA_logo.svg exports/"$study_area"/pdf/logo.svg
-cp images/BikeDNA_logo.svg exports/"$study_area"/html/logo.svg
