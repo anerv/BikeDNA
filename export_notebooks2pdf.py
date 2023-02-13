@@ -282,7 +282,7 @@ tempfiles = [
     "appendix_a.html",
     "appendix_atemp.html",
     "appendix_a.pdf",
-    #"logo.svg"
+    "logo.svg"
 ]
 for t in tempfiles:
     try:
