@@ -1,3 +1,6 @@
+<img src="images/BikeDNA_logo.svg" width="200" alt="BikeDNA logo" style="float:right"/>
+<div style="clear: right"></div>
+
 # Data set requirements for BikeDNA
 
 ## Study area input requirements
