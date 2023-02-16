@@ -1,4 +1,4 @@
-<img src="images/BikeDNA_logo.svg" width="50%" alt="BikeDNA logo" style="display: block; margin: 0 auto"/>
+<p align="center"><img src="images/BikeDNA_logo.svg" width="50%" alt="BikeDNA logo"/></p>
 
 # BikeDNA: Bicycle Infrastructure Data & Network Assessment
 
