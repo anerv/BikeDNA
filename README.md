@@ -57,6 +57,8 @@ conda activate bikedna
 
 *This method does not control the library versions and should be used as a last resort.*
 
+The code for BikeDNA has been developed and tested using macOS 13.2.1.
+
 ### Install package
 
 The repository has been set up using the structure described in the [Good Research Developer](https://goodresearch.dev/setup.html). Once the repository has been downloaded, navigate to the main folder in a terminal window and run the command
