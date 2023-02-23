@@ -127,18 +127,18 @@ All analysis notebooks are in the [`scripts`](scripts) folder.
 
 #### OSM
 
-- **[`1a_initialize_osm`](https://github.com/anerv/cycling_data_quality/blob/main/scripts/OSM/1a_initialize_osm.ipynb):** This notebook downloads data from OSM for the user-defined study area and  processes it to the format needed in the analysis.
-- **[`1b_intrinsic_analysis_osm`](https://github.com/anerv/cycling_data_quality/blob/main/scripts/OSM/1b_intrinsic_analysis_OSM.ipynb):** The intrinsic analysis evaluates the quality of the OSM data in the study area from the perspective of bicycle planning and research. This evaluation includes, for example, missing tags, disconnected components, and network gaps. *Intrinsic* means that the dat set is analyzed for itself, without being compared to other data.
+- **[`1a_initialize_osm`](https://github.com/anerv/BikeDNA/blob/main/scripts/OSM/1a_initialize_osm.ipynb):** This notebook downloads data from OSM for the user-defined study area and  processes it to the format needed in the analysis.
+- **[`1b_intrinsic_analysis_osm`](https://github.com/anerv/BikeDNA/blob/main/scripts/OSM/1b_intrinsic_analysis_OSM.ipynb):** The intrinsic analysis evaluates the quality of the OSM data in the study area from the perspective of bicycle planning and research. This evaluation includes, for example, missing tags, disconnected components, and network gaps. *Intrinsic* means that the dat set is analyzed for itself, without being compared to other data.
 
 #### REFERENCE
 
-- **[`2a_initialize_reference`](https://github.com/anerv/cycling_data_quality/blob/main/scripts/REFERENCE/2a_initialize_reference.ipynb):** This notebook processes the reference data provided by the user to the format needed in the analysis.
-- **[`2b_intrinsic_analysis_reference`](https://github.com/anerv/cycling_data_quality/blob/main/scripts/REFERENCE/2b_intrinsic_analysis_reference.ipynb):** The intrinsic analysis evaluates the quality of the reference data set in the study area from the perspective of bicycle planning and research. This evaluation includes, for example, disconnected components and network gaps. *Intrinsic* means that the data set is analyzed for itself, without being compared to other data.
+- **[`2a_initialize_reference`](https://github.com/anerv/BikeDNA/blob/main/scripts/REFERENCE/2a_initialize_reference.ipynb):** This notebook processes the reference data provided by the user to the format needed in the analysis.
+- **[`2b_intrinsic_analysis_reference`](https://github.com/anerv/BikeDNA/blob/main/scripts/REFERENCE/2b_intrinsic_analysis_reference.ipynb):** The intrinsic analysis evaluates the quality of the reference data set in the study area from the perspective of bicycle planning and research. This evaluation includes, for example, disconnected components and network gaps. *Intrinsic* means that the data set is analyzed for itself, without being compared to other data.
 
 #### COMPARE
 
-- **[`3a_extrinsic_analysis_metrics`](https://github.com/anerv/cycling_data_quality/blob/main/scripts/COMPARE/3a_extrinsic_analysis_metrics.ipynb):** The extrinsic analysis compares the results computed in the intrinsic analysis of the OSM and reference data. The analysis considers for example differences in network density and structure, and differing connectivity across the study area.
-- **[`3b_extrinsic_analysis_feature_matching`](https://github.com/anerv/cycling_data_quality/blob/main/scripts/COMPARE/3b_extrinsic_analysis_feature_matching.ipynb):** This notebook contains a functionality for matching corresponding features in the reference and OSM data. This step is computationally expensive, but provides an excellent overview of different geometries and/or errors of missing or excess data.
+- **[`3a_extrinsic_analysis_metrics`](https://github.com/anerv/BikeDNA/blob/main/scripts/COMPARE/3a_extrinsic_analysis_metrics.ipynb):** The extrinsic analysis compares the results computed in the intrinsic analysis of the OSM and reference data. The analysis considers for example differences in network density and structure, and differing connectivity across the study area.
+- **[`3b_extrinsic_analysis_feature_matching`](https://github.com/anerv/BikeDNA/blob/main/scripts/COMPARE/3b_extrinsic_analysis_feature_matching.ipynb):** This notebook contains a functionality for matching corresponding features in the reference and OSM data. This step is computationally expensive, but provides an excellent overview of different geometries and/or errors of missing or excess data.
 
 ### Run analysis
 
