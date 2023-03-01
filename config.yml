@@ -34,6 +34,33 @@ bicycle_infrastructure_queries:
   E:
     "cycleway_both in ['lane','track','opposite_lane','opposite_track','designated','crossing']" # 'shared_lane'
 
+# Queries for defining bicycle infrastructure as bidirectional (True/False) and centerline mappings (True/False)
+# Modify dict values, not keys
+simplify_tags_queries:
+    "centerline_false_bidirectional_true":
+      - "highway == 'cycleway' & (oneway=='no' or oneway_bicycle=='no')"
+      - "highway == 'track' & bicycle == 'designated' & (oneway=='no' or oneway_bicycle =='no')"
+      - "highway == 'path' & bicycle == 'designated' & (oneway=='no' or oneway_bicycle =='no')"
+    
+    "centerline_false_bidirectional_false":
+      - "highway == 'cycleway' & (oneway !='no' or oneway_bicycle != 'no')"
+      - "highway == 'track' & bicycle == 'designated' & (oneway !='no' or oneway_bicycle !='no')"
+      - "highway == 'path' & bicycle == 'designated' & (oneway !='no' or oneway_bicycle !='no')"
+  
+    "centerline_true_bidirectional_true": 
+      - "cycleway_left in ['lane','track','opposite_lane','opposite_track','designated','crossing'] and (cycleway_right in ['no','none','separate'] or cycleway_right.isnull() or cycleway_right not in ['lane','track','opposite_lane','opposite_track','designated','crossing']) and oneway_bicycle =='no'"
+      - "cycleway_right in ['lane','track','opposite_lane','opposite_track','designated','crossing'] and (cycleway_left in ['no','none','separate'] or cycleway_left.isnull() or cycleway_left not in ['lane','track','opposite_lane','opposite_track','designated','crossing']) and oneway_bicycle =='no'"
+      - "cycleway in ['lane','track','opposite_lane','opposite_track','designated','crossing'] and (oneway_bicycle == 'no' or oneway_bicycle.isnull())"
+      - "cycleway_both in ['lane','track','opposite_lane','opposite_track','designated','crossing'] and (oneway_bicycle == 'no' or oneway_bicycle.isnull())"
+      - "cycleway_left in ['lane','track','opposite_lane','opposite_track','designated','crossing'] and cycleway_right in ['lane','track','opposite_lane','opposite_track','designated','crossing']"
+
+    "centerline_true_bidirectional_false":
+      - "cycleway_left in ['lane','track','opposite_lane','opposite_track','designated','crossing'] and (cycleway_right in ['no','none','separate'] or cycleway_right.isnull()  or cycleway_right not in ['lane','track','opposite_lane','opposite_track','designated','crossing']) and oneway_bicycle !='no'"
+      - "cycleway_right in ['lane','track','opposite_lane','opposite_track','designated','crossing'] and (cycleway_left in ['no','none','separate'] or cycleway_left.isnull()  or cycleway_left not in ['lane','track','opposite_lane','opposite_track','designated','crossing']) and oneway_bicycle != 'no'"
+      - "cycleway in ['lane','track','opposite_lane','opposite_track','designated','crossing'] and oneway_bicycle == 'yes'"
+      - "cycleway_both in ['lane','track','opposite_lane','opposite_track','designated','crossing'] and oneway_bicycle == 'yes'"
+  
+  
 osm_bicycle_infrastructure_type:
   'protected':
     - "highway == 'cycleway'"
