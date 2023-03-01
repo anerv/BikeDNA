@@ -250,4 +250,4 @@ License: [Open Data DK](https://www.opendata.dk/open-data-dk/open-data-dk-licens
 
 Development of BikeDNA was supported by the Danish Road Directorate.
 
-Logo by Katrin Geistler(luftlinie / design & grafik).
+Logo by Katrin Geistler (luftlinie / design & grafik).
