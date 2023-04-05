@@ -34,7 +34,19 @@ keep_cols = [c for c in cols if c in ref_edges_simplified.columns]
 ref_edges_simplified[reference_id_col] = ref_edges_simplified[reference_id_col].astype(
     str
 )
+
 ref_edges_simplified["osmid"] = ref_edges_simplified["osmid"].astype(str)
+
+if bicycle_bidirectional in ref_edges_simplified.columns:
+    ref_edges_simplified[bicycle_bidirectional] = ref_edges_simplified[
+        bicycle_bidirectional
+    ].astype(str)
+
+if reference_geometries in ref_edges_simplified.columns:
+    ref_edges_simplified[reference_geometries] = ref_edges_simplified[
+        reference_geometries
+    ].astype(str)
+
 ref_edges_simplified = ref_edges_simplified[keep_cols]
 
 ref_edges_simplified.to_file(ref_edges_simplified_fp, index=True, overwrite="yes")
@@ -71,6 +83,17 @@ ref_edges_simp_joined[reference_id_col] = ref_edges_simp_joined[
     reference_id_col
 ].astype(str)
 ref_edges_simp_joined["osmid"] = ref_edges_simp_joined["osmid"].astype(str)
+
+if bicycle_bidirectional in ref_edges_simp_joined.columns:
+    ref_edges_simp_joined[bicycle_bidirectional] = ref_edges_simp_joined[
+        bicycle_bidirectional
+    ].astype(str)
+
+if reference_geometries in ref_edges_simp_joined.columns:
+    ref_edges_simp_joined[reference_geometries] = ref_edges_simp_joined[
+        reference_geometries
+    ].astype(str)
+
 ref_edges_simp_joined = ref_edges_simp_joined[keep_cols]
 
 ref_edges_simp_joined.to_file(
