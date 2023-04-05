@@ -7,17 +7,9 @@ exec(open("../settings/yaml_variables.py").read())
 exec(open("../settings/paths.py").read())
 
 # Load simplified and non-simplified graphs
-ref_graph = ox.load_graphml(
-    ref_graph_fp, edge_dtypes={"cycling_bidirectional": ox.io._convert_bool_string}
-)
+ref_graph = ox.load_graphml(ref_graph_fp)
 
-ref_graph_simplified = ox.load_graphml(
-    ref_graph_simplified_fp,
-    edge_dtypes={
-        "cycling_bidirectional": ox.io._convert_bool_string,
-        "infrastructure_length": float,
-    },
-)
+ref_graph_simplified = ox.load_graphml(ref_graph_simplified_fp)
 
 print("Reference graphs loaded successfully!")
 

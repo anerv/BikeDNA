@@ -8,15 +8,11 @@ exec(open("../settings/paths.py").read())
 
 # Load simplified and non-simplified graphs
 osm_graph = ox.load_graphml(
-    osm_graph_fp, edge_dtypes={"cycling_bidirectional": ox.io._convert_bool_string}
+    osm_graph_fp
 )
 
 osm_graph_simplified = ox.load_graphml(
-    osm_graph_simplified_fp,
-    edge_dtypes={
-        "cycling_bidirectional": ox.io._convert_bool_string,
-        "infrastructure_length": float,
-    },
+    osm_graph_simplified_fp
 )
 
 print("OSM graphs loaded successfully!")
