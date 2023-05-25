@@ -6,8 +6,8 @@
 ## Study area input requirements
 
 - The study area must be defined by a **polygon** in `gpkg` format. **Note**: If a different file name or file extension is used, the file paths in notebooks 1a and 2a must be updated. The file must be in a format readable by [GeoPandas](https://geopandas.org/en/stable/docs/user_guide/io.html) (e.g., GeoPackage, GeoJSON, Shapefile etc.).
-- The polygon must be placed in the folder structure as follows: `/data/study_area_polygon/'my_study_area'/study_area_polygon.gpkg`  
-- The polygon must be in a projected CRS with meters as unit length
+- To generate the polygon, use for example [geojson.io](<https://geojson.io/>) to draw and download a polygon of the desired area, save as `study_area_polygon`, and update the file paths in notebooks 1a and 2a to match the chosen format.
+- The polygon must be placed in the folder structure as follows: `/data/study_area_polygon/'my_study_area'/study_area_polygon.gpkg`
 
 ## OSM settings
 
