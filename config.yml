@@ -22,6 +22,7 @@ study_crs: # The CRS you want to use for the analysis, as string 'EPSG:XXXX'
 plot_resolution: 'low'
 
 # Queries used to retrieve the network edges with dedicated bicycle infrastructure from OSM street network data. Update as needed.
+# Note, for example, the proposed tag for indicating the type of separation for cycle ways: https://wiki.openstreetmap.org/wiki/Proposal:Separation
 bicycle_infrastructure_queries:
   A:
     "highway == 'cycleway'"
@@ -61,7 +62,7 @@ simplify_tags_queries:
       - "cycleway in ['lane','track','opposite_lane','opposite_track','designated','crossing'] and oneway_bicycle == 'yes'"
       - "cycleway_both in ['lane','track','opposite_lane','opposite_track','designated','crossing'] and oneway_bicycle == 'yes'"
   
-
+# Note that the new tag 'separation' in some areas also are used for indicating protected cycle ways https://wiki.openstreetmap.org/wiki/Proposal:Separation
 osm_bicycle_infrastructure_type:
   'protected':
     - "highway == 'cycleway'"
