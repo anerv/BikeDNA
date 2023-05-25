@@ -1,8 +1,8 @@
 ,OSM,GeoDanmark
-Count of matched edges,2585.0,4313.0
-Percent matched edges,45.598871053095785,91.66843783209352
-Length of matched edges (km),422.1541792710598,601.0974836260094
-Percent of matched network length,52.01940377697433,95.94904477170644
-Local min of % matched edges,3.4482758620689653,7.4074074074074066
-Local max of % matched edges,100.0,100.0
-Local average of % matched edges,72.23056478398283,96.48719705659668
+Count of matched segments,41794.0,60809.0
+Percent matched segments,50.82078844329872,95.46903210613078
+Length of matched segments (km),414.6067974903437,598.5757446903247
+Percent of matched network length,51.089387400047826,95.54651698106755
+Local min of % matched segments,1.2345679012345678,1.5625
+Local max of % matched segments,100.0,100.0
+Local average of % matched segments,73.25068485224452,96.36487679375087
