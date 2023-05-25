@@ -6,8 +6,8 @@
 ## Study area input requirements
 
 - The study area must be defined by a **polygon** in `gpkg` format. **Note**: If a different file name or file extension is used, the file paths in notebooks 1a and 2a must be updated. The file must be in a format readable by [GeoPandas](https://geopandas.org/en/stable/docs/user_guide/io.html) (e.g., GeoPackage, GeoJSON, Shapefile etc.).
-- The polygon must be placed in the folder structure as follows: `/data/study_area_polygon/'my_study_area'/study_area_polygon.gpkg`  
-- The polygon must be in a projected CRS with meters as unit length
+- To generate the polygon, use for example [geojson.io](<https://geojson.io/>) to draw and download a polygon of the desired area, save as `study_area_polygon`, and update the file paths in notebooks 1a and 2a to match the chosen format.
+- The polygon must be placed in the folder structure as follows: `/data/study_area_polygon/'my_study_area'/study_area_polygon.gpkg`
 
 ## OSM settings
 
@@ -42,7 +42,7 @@ For the code and the analysis to run without errors, the data must:
 
 - only contain **bicycle infrastructure** (i.e. not also the regular street network)
 - have all geometries as **LineStrings** (not MultiLineStrings)
-- have **all intersections** represented as LineString endpoints
+- have **all intersections** represented as LineString endpoints (if nodes are missing at intersections, this will distort topology- and connectivity metrics)
 - be in a **CRS** recognized by GeoPandas
 - contain a column describing the **type of bicycle infrastructure**, i.e. whether each feature is a physically **protected**/separated infrastructure or if it is **unprotected** (*feature* refers to a network edge - each row in the network edge GeoDataFrames thus represents one feature)
 - contain a column describing whether each feature is **bidirectional** or not (see below for details)
