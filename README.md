@@ -128,7 +128,7 @@ All analysis notebooks are in the [`scripts`](scripts) folder.
 #### OSM
 
 - **[`1a_initialize_osm`](https://github.com/anerv/BikeDNA/blob/main/scripts/OSM/1a_initialize_osm.ipynb):** This notebook downloads data from OSM for the user-defined study area and  processes it to the format needed in the analysis.
-- **[`1b_intrinsic_analysis_osm`](https://github.com/anerv/BikeDNA/blob/main/scripts/OSM/1b_intrinsic_analysis_OSM.ipynb):** The intrinsic analysis evaluates the quality of the OSM data in the study area from the perspective of bicycle planning and research. This evaluation includes, for example, missing tags, disconnected components, and network gaps. *Intrinsic* means that the dat set is analyzed for itself, without being compared to other data.
+- **[`1b_intrinsic_analysis_osm`](https://github.com/anerv/BikeDNA/blob/main/scripts/OSM/1b_intrinsic_analysis_osm.ipynb):** The intrinsic analysis evaluates the quality of the OSM data in the study area from the perspective of bicycle planning and research. This evaluation includes, for example, missing tags, disconnected components, and network gaps. *Intrinsic* means that the dat set is analyzed for itself, without being compared to other data.
 
 #### REFERENCE
 
@@ -220,7 +220,7 @@ A final word of caution concerns the use of grid cells for computing local value
 ## Get in touch
 
 Do you have any suggestions for additional metrics or ways to improve the analysis?
-Reach us at anev@itu.dk (Ane Rahbek Vierø) or anvy@itu.dk (Anastassia Vybornova).
+Reach us at <anev@itu.dk> (Ane Rahbek Vierø) or <anvy@itu.dk> (Anastassia Vybornova).
 
 ## Data & Licenses
 
