@@ -102,11 +102,11 @@ columns_match = {
 }
 
 pct_rows = [
-    "Percent matched edges",
+    "Percent matched segments",
     "Percent of matched network length",
-    "Local min of % matched edges",
-    "Local max of % matched edges",
-    "Local average of % matched edges",
+    "Local min of % matched segments",
+    "Local max of % matched segments",
+    "Local average of % matched segments",
 ]
 
 
