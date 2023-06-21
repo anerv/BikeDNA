@@ -6,6 +6,10 @@
 
 This is the repository of BikeDNA, a tool for assessing the quality of [OpenStreetMap (OSM)](https://www.openstreetmap.org/) and other bicycle infrastructure data sets in a reproducible way. It provides planners, researchers, data maintainers, cycling advocates, and others who work with bicycle networks a detailed, informed overview of data quality in a given area.
 
+**Paper:** <https://journals.sagepub.com/doi/10.1177/23998083231184471>
+
+Running BikeDNA on large data sets? Consider using [**BikeDNA BIG**](https://github.com/anerv/BikeDNA_BIG).
+
 <details><summary>Background</summary>
 
 A fair amount of research projects on OpenStreetMap and other forms of volunteered geographic information (VGI) have already been conducted, but few focus explicitly on data on bicycle infrastructure. Doing so is however important because paths and tracks for cyclists and pedestrians often are mapped last and are more likely to have errors ([Barron et al., 2014](https://onlinelibrary.wiley.com/doi/10.1111/tgis.12073), [Neis et al. 2012](https://www.mdpi.com/1999-5903/4/1/1)). Moreover, the spatial distribution of dips in data quality are often not random in crowdsourced data but correlate with population density and other characteristics of the mapped area ([Forghani and Delavar, 2014](https://www.mdpi.com/2220-9964/3/2/750)). This necessitates a critical stance towards the data we use for our research and planning, despite the overall high quality of OSM.
@@ -247,6 +251,8 @@ License: [GeoDanmark](https://www.geodanmark.dk/wp-content/uploads/2022/08/Vilka
 License: [Open Data DK](https://www.opendata.dk/open-data-dk/open-data-dk-licens)
 
 ## Credits
+
+Please cite as: Vierø, A. R., Vybornova, A., & Szell, M. (2023). BikeDNA: A tool for bicycle infrastructure data and network assessment. Environment and Planning B: Urban Analytics and City Science, 0(0). <https://doi.org/10.1177/23998083231184471>
 
 Development of BikeDNA was supported by the Danish Road Directorate.
 

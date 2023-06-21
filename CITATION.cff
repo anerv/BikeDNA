@@ -1,0 +1,36 @@
+cff-version: 1.0.0
+message: "If you use this source code, please cite it as below."
+authors:
+- family-names: "Vierø"
+  given-names: "Ane Rahbek"
+  orcid: "https://orcid.org/0000-0002-2404-7271"
+- family-names: "Vybornova"
+  given-names: "Anastassia"
+  orcid: "https://orcid.org/0000-0001-6915-2561"
+- family-names: "Szell"
+  given-names: "Michael"
+  orcid: "https://orcid.org/0000-0003-3022-2483"
+title: "BikeDNA: Bicycle Infrastructure Data & Network Assessment"
+version: 1.0.0
+date-released: 2023-02-16
+url: "https://github.com/anerv/BikeDNA"
+preferred-citation:
+  type: article
+  authors:
+  - family-names: "Vierø"
+    given-names: "Ane Rahbek"
+    orcid: "https://orcid.org/0000-0002-2404-7271"
+  - family-names: "Vybornova"
+    given-names: "Anastassia"
+    orcid: "https://orcid.org/0000-0001-6915-2561"
+  - family-names: "Szell"
+    given-names: "Michael"
+    orcid: "https://orcid.org/0000-0003-3022-2483"
+  doi: "10.1177/23998083231184471"
+  journal: "Environment and Planning B: Urban Analytics and City Science"
+  start: 1
+  end: 17
+  title: "BikeDNA: A tool for bicycle infrastructure data and network assessment"
+  issue: 0
+  volume: 0
+  year: 2023
