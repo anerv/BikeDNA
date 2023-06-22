@@ -207,7 +207,7 @@ A title page, preamble, headers, footers, and an appendix will be generated for 
 
 ## Limitations
 
-BikeDNA uses [OSMnx](https://osmnx.readthedocs.io/en/stable/) to load OSM data and includes some elements (like feature matching) that are computationally expensive. For analysis of bigger areas like regions or countries, we recommend to use for example [Pyrosm](https://pyrosm.readthedocs.io/en/latest/) for creating street networks from OSM data (not included in the repository for now).
+BikeDNA uses [OSMnx](https://osmnx.readthedocs.io/en/stable/) to load OSM data and includes some elements (like feature matching) that are computationally expensive. For analysis of bigger areas like regions or countries, we recommend to use this version of BikeDNA adapted for larger data sets: <https://github.com/anerv/BikeDNA_BIG>.
 
 <details><summary>More Limitations</summary>
 
