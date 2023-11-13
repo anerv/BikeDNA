@@ -186,4 +186,6 @@ incompatible_false_patch = mpatches.Patch(
 import contextily as cx
 
 cx_tile_1 = cx.providers.CartoDB.Voyager
-cx_tile_2 = cx.providers.Stamen.TonerLite
+cx_tile_2 = cx.providers.CartoDB.Positron
+
+
