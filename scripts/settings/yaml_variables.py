@@ -1,5 +1,5 @@
 import yaml
-from src import evaluation_functions as ef
+from bikedna import evaluation_functions as ef
 
 with open(r"../../config.yml") as file:
 
