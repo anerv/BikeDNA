@@ -9,10 +9,10 @@ import matplotlib.pyplot as plt
 from shapely.geometry import LineString, Polygon, Point, MultiLineString
 import math
 
-from src import evaluation_functions as ef
+from bikedna import evaluation_functions as ef
 
-from src import matching_functions as mf
-from src import graph_functions as gf
+from bikedna import matching_functions as mf
+from bikedna import graph_functions as gf
 
 #%%
 ###################### TESTS FOR EVALUATION FUNCTIONS #############################
