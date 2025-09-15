@@ -250,7 +250,9 @@ License: [Open Data DK](https://www.opendata.dk/open-data-dk/open-data-dk-licens
 
 ## Credits
 
-Please cite as: Vierø, A. R., Vybornova, A., & Szell, M. (2023). BikeDNA: A tool for bicycle infrastructure data and network assessment. Environment and Planning B: Urban Analytics and City Science, 0(0). <https://doi.org/10.1177/23998083231184471>
+Please cite as: 
+
+>Vierø, A. R., Vybornova, A., & Szell, M. (2024). BikeDNA: A tool for bicycle infrastructure data and network assessment. Environment and Planning B: Urban Analytics and City Science 51(2). <https://doi.org/10.1177/23998083231184471>
 
 Development of BikeDNA was supported by the Danish Road Directorate.
 

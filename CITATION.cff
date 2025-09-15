@@ -28,9 +28,9 @@ preferred-citation:
     orcid: "https://orcid.org/0000-0003-3022-2483"
   doi: "10.1177/23998083231184471"
   journal: "Environment and Planning B: Urban Analytics and City Science"
-  start: 1
-  end: 17
+  start: 512
+  end: 528
   title: "BikeDNA: A tool for bicycle infrastructure data and network assessment"
-  issue: 0
-  volume: 0
-  year: 2023
+  issue: 51
+  volume: 2
+  year: 2024
